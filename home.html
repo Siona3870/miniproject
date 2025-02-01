@@ -39,10 +39,10 @@
             text-align: center;
         }
 
-        .header h1 {
-            font-size: 3.5rem; /* Increased font size */
-            font-family: 'Kurale'; /* Changed to Kurale font */
-            font-weight: bold; /* Made it bold */
+        /* Style for the logo image */
+        .header-text img {
+            width: 600px; /* Adjust width as needed */
+            max-width: 100%;
         }
 
         .header p {
@@ -54,33 +54,33 @@
             max-width: 500px;
         }
 
-        .header img {
-            width: 350px;
+        /* Increased size and moved main image slightly left */
+        .header img.main-image {
+            width: 450px; /* Increased from 350px */
+            margin-left: -50px; /* Moves the image towards the left */
         }
 
         /* Wavy bar with straight top and wavy bottom */
         .wavy-bar {
-    height: 100px; /* Height of the bar */
-    background-color: #FF9874;
-    position: relative;
-}
+            height: 100px;
+            background-color: #FF9874;
+            position: relative;
+        }
 
-.wavy-bar::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40px; /* Height of the wave */
-    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%2040%22%3E%3Cpath%20d%3D%22M0%200%20L%20200%200%20C%20150%2020%20150%2040%200%2040%20Z%22%20fill%3D%22%23FF9874%22%3E%3C/path%3E%3C/svg%3E') no-repeat;
-    background-size: 100% 100%;
-}
-
-
+        .wavy-bar::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%2040%22%3E%3Cpath%20d%3D%22M0%200%20L%20200%200%20C%20150%2020%20150%2040%200%2040%20Z%22%20fill%3D%22%23FF9874%22%3E%3C/path%3E%3C/svg%3E') no-repeat;
+            background-size: 100% 100%;
+        }
 
         .blue-section {
             background-color: #7695FF;
-            padding: 80px 50px; /* Increased padding to make the section taller */
+            padding: 80px 50px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -94,24 +94,35 @@
             margin-top: 20px;
         }
 
+        /* Blue boxes with shadow and hover effect */
         .icon-box {
             background-color: #C2CDFF;
-            width: 250px; /* Increased width */
-            height: 300px; /* Increased height */
+            width: 250px;
+            height: 300px;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
         }
 
+        /* Hover effect for blue boxes */
+        .icon-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Move images inside the blue boxes slightly up */
         .icon-box img {
-            width: 120px; /* Adjusted size for better fit */
+            width: 120px;
+            margin-top: -15px;
         }
 
         .footer {
             background-color: #F1A8C9;
             text-align: center;
-            padding: 50px 20px; /* Increased padding for more height */
+            padding: 50px 20px;
             font-size: 1rem;
             color: white;
         }
@@ -122,19 +133,19 @@
     
     <div class="header">
         <div class="header-text">
-            <h1>PLAN & PREP</h1>
+            <img src="title.png" alt="Plan & Prep Logo"> <!-- Added logo here -->
             <p>Plan smarter, achieve more! <br>Your journey to organized success starts here</p>
         </div>
-        <img src="your-image.png" alt="Illustration">
+        <img src="main.png" class="main-image" alt="Main Image">
     </div>
     
     <div class="wavy-bar"></div>
     
     <div class="blue-section">
         <div class="icon-container">
-            <div class="icon-box"><img src="calendar-icon.png" alt="Calendar"></div>
-            <div class="icon-box"><img src="checklist-icon.png" alt="Checklist"></div>
-            <div class="icon-box"><img src="notes-icon.png" alt="Notes"></div>
+            <div class="icon-box"><img src="cal.jpg" alt="Calendar"></div>
+            <div class="icon-box"><img src="todo.jpg" alt="Checklist"></div>
+            <div class="icon-box"><img src="notes.jpg" alt="Notes"></div>
         </div>
     </div>
     
@@ -146,4 +157,3 @@
     </div>
 </body>
 </html>
-
