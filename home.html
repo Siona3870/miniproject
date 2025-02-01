@@ -34,17 +34,19 @@
             padding: 50px;
         }
 
+        /* Style for the logo image */
         .header-text {
             max-width: 50%;
             text-align: center;
+            margin-top: -80px; /* Moves title & description higher */
         }
 
-        /* Style for the logo image */
         .header-text img {
-            width: 600px; /* Adjust width as needed */
+            width: 600px; /* Increased size */
             max-width: 100%;
         }
 
+        /* Center description with respect to the title */
         .header p {
             font-size: 1.5rem;
             margin-top: 10px;
@@ -52,6 +54,28 @@
             color: #333;
             text-align: center;
             max-width: 500px;
+            margin-left: auto;
+            margin-right: auto; /* Centers the text */
+        }
+
+        /* Style for LOGIN button */
+        .login-btn {
+        background: linear-gradient(to right, #A8E6CF, #DCEDC1); /* Pastel Green Gradient */
+        color: white;
+        border: 2px solid #88C093; /* Slightly Darker Green Border */
+        padding: 12px 25px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-top: 40px; /* Moves button lower */
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: inline-block;
+}
+
+        .login-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }
 
         /* Increased size and moved main image slightly left */
@@ -102,9 +126,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             border-radius: 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            padding: 20px;
         }
 
         /* Hover effect for blue boxes */
@@ -113,18 +140,40 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
         }
 
-        /* Move images inside the blue boxes slightly up */
+        /* Make Calendar Icon Bigger */
         .icon-box img {
             width: 120px;
             margin-top: -15px;
         }
 
+        /* Specifically increase size of calendar image */
+        .icon-box img[src="cal.png"] {
+            width: 180px; /* Calendar icon is larger */
+        }
+
+        /* Text below the images */
+        .icon-box p {
+            font-family: 'Cooper Black', sans-serif;
+            font-size: 1.2rem;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        /* Footer adjustments */
         .footer {
             background-color: #F1A8C9;
             text-align: center;
-            padding: 50px 20px;
+            padding: 30px 20px;
             font-size: 1rem;
             color: white;
+        }
+
+        .footer p {
+            font-family: 'Bahnschrift SemiBold', sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 10px auto;
+            max-width: 500px;
         }
     </style>
 </head>
@@ -133,8 +182,9 @@
     
     <div class="header">
         <div class="header-text">
-            <img src="title.png" alt="Plan & Prep Logo"> <!-- Added logo here -->
+            <img src="title1.png" alt="Plan & Prep Logo"> <!-- Logo -->
             <p>Plan smarter, achieve more! <br>Your journey to organized success starts here</p>
+            <button class="login-btn">LOGIN</button> <!-- Login Button Moved Lower & Styled -->
         </div>
         <img src="main.png" class="main-image" alt="Main Image">
     </div>
@@ -143,9 +193,18 @@
     
     <div class="blue-section">
         <div class="icon-container">
-            <div class="icon-box"><img src="cal.jpg" alt="Calendar"></div>
-            <div class="icon-box"><img src="todo.jpg" alt="Checklist"></div>
-            <div class="icon-box"><img src="notes.jpg" alt="Notes"></div>
+            <div class="icon-box">
+                <img src="cal.png" alt="Calendar">
+                <p>Schedule Management</p> 
+            </div>
+            <div class="icon-box">
+                <img src="notes.png" alt="Notes">
+                <p>Question & Answer Generator</p> 
+            </div>
+            <div class="icon-box">
+                <img src="todo.png" alt="Checklist">
+                <p>Task Management</p> 
+            </div>
         </div>
     </div>
     
@@ -153,7 +212,7 @@
         <p><strong>CONTACT US</strong></p>
         <p>Need assistance or have inquiries?</p>
         <p>Our team is ready to assist you!</p>
-        <p>Email: abc@gmail.com</p>
+        <p>Email: planandprep@gmail.com</p>
     </div>
 </body>
 </html>
