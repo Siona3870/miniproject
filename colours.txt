@@ -1,0 +1,7 @@
+ 
+#FFECEA
+#C2CDFF
+#7695FF
+#30356D
+#FF9874
+white
